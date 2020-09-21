@@ -17,5 +17,5 @@ cmdX(){
 	fi
 }
 
-cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-crypt.static.compile.info
-cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-crypt.dynamic.compile.info
+cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-crypt.static.compile
+cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-crypt.dynamic.compile
