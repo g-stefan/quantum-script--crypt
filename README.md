@@ -1,10 +1,12 @@
 # Quantum Script Extension Crypt
 
-Crypt;\
-Crypt.passwordEncrypt(key,data);\
-Crypt.passwordDecrypt(key,data);\
-Crypt.passwordEncryptFile(key,fileIn,fileOut);\
+```javascript
+Crypt;
+Crypt.passwordEncrypt(key,data);
+Crypt.passwordDecrypt(key,data);
+Crypt.passwordEncryptFile(key,fileIn,fileOut);
 Crypt.passwordDecryptFile(key,fileIn,fileOut);
+```
 
 ## License
 
