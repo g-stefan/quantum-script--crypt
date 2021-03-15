@@ -1,7 +1,0 @@
---lib qse-crypt
---project-base=quantum-script-extension-crypt
---source-is-separate
---use-project=quantum-script.static
---use-project=qse-buffer.static
---install-dev
---install-inc=quantum-script-extension
