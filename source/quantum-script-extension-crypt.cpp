@@ -45,22 +45,22 @@ namespace Quantum {
 					const uint8_t *data = nullptr;
 					size_t dataSize = 0;
 
-					if(VariableString::isVariableString(passwordV)) {
+					if(TIsType<VariableString>(passwordV)) {
 						password = (const uint8_t *)(((VariableString *)passwordV.value())->value.value());
 						passwordSize = ((VariableString *)passwordV.value())->value.length();
 					};
 
-					if(VariableBuffer::isVariableBuffer(passwordV)) {
+					if(TIsType<VariableBuffer>(passwordV)) {
 						password = (const uint8_t *)(((VariableBuffer *)passwordV.value())->buffer.buffer);
 						passwordSize = ((VariableBuffer *)passwordV.value())->buffer.length;
 					};
 
-					if(VariableString::isVariableString(dataV)) {
+					if(TIsType<VariableString>(dataV)) {
 						data = (const uint8_t *)(((VariableString *)dataV.value())->value.value());
 						dataSize = ((VariableString *)dataV.value())->value.length();
 					};
 
-					if(VariableBuffer::isVariableBuffer(dataV)) {
+					if(TIsType<VariableBuffer>(dataV)) {
 						data = (const uint8_t *)(((VariableBuffer *)dataV.value())->buffer.buffer);
 						dataSize = ((VariableBuffer *)dataV.value())->buffer.length;
 					};
@@ -88,22 +88,22 @@ namespace Quantum {
 					const uint8_t *data = nullptr;
 					size_t dataSize = 0;
 
-					if(VariableString::isVariableString(passwordV)) {
+					if(TIsType<VariableString>(passwordV)) {
 						password = (const uint8_t *)(((VariableString *)passwordV.value())->value.value());
 						passwordSize = ((VariableString *)passwordV.value())->value.length();
 					};
 
-					if(VariableBuffer::isVariableBuffer(passwordV)) {
+					if(TIsType<VariableBuffer>(passwordV)) {
 						password = (const uint8_t *)(((VariableBuffer *)passwordV.value())->buffer.buffer);
 						passwordSize = ((VariableBuffer *)passwordV.value())->buffer.length;
 					};
 
-					if(VariableString::isVariableString(dataV)) {
+					if(TIsType<VariableString>(dataV)) {
 						data = (const uint8_t *)(((VariableString *)dataV.value())->value.value());
 						dataSize = ((VariableString *)dataV.value())->value.length();
 					};
 
-					if(VariableBuffer::isVariableBuffer(dataV)) {
+					if(TIsType<VariableBuffer>(dataV)) {
 						data = (const uint8_t *)(((VariableBuffer *)dataV.value())->buffer.buffer);
 						dataSize = ((VariableBuffer *)dataV.value())->buffer.length;
 					};
@@ -131,12 +131,12 @@ namespace Quantum {
 					const uint8_t *password = nullptr;
 					size_t passwordSize = 0;
 
-					if(VariableString::isVariableString(passwordV)) {
+					if(TIsType<VariableString>(passwordV)) {
 						password = (const uint8_t *)(((VariableString *)passwordV.value())->value.value());
 						passwordSize = ((VariableString *)passwordV.value())->value.length();
 					};
 
-					if(VariableBuffer::isVariableBuffer(passwordV)) {
+					if(TIsType<VariableBuffer>(passwordV)) {
 						password = (const uint8_t *)(((VariableBuffer *)passwordV.value())->buffer.buffer);
 						passwordSize = ((VariableBuffer *)passwordV.value())->buffer.length;
 					};
@@ -159,12 +159,12 @@ namespace Quantum {
 					const uint8_t *password = nullptr;
 					size_t passwordSize = 0;
 
-					if(VariableString::isVariableString(passwordV)) {
+					if(TIsType<VariableString>(passwordV)) {
 						password = (const uint8_t *)(((VariableString *)passwordV.value())->value.value());
 						passwordSize = ((VariableString *)passwordV.value())->value.length();
 					};
 
-					if(VariableBuffer::isVariableBuffer(passwordV)) {
+					if(TIsType<VariableBuffer>(passwordV)) {
 						password = (const uint8_t *)(((VariableBuffer *)passwordV.value())->buffer.buffer);
 						passwordSize = ((VariableBuffer *)passwordV.value())->buffer.length;
 					};
