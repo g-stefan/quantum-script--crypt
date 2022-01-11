@@ -15,10 +15,10 @@ namespace Quantum {
 			namespace Crypt {
 				namespace Version {
 
-					static const char *version_ = "2.10.0";
-					static const char *build_ = "21";
-					static const char *versionWithBuild_ = "2.10.0.21";
-					static const char *datetime_ = "2022-01-01 21:19:39";
+					static const char *version_ = "2.17.0";
+					static const char *build_ = "24";
+					static const char *versionWithBuild_ = "2.17.0.24";
+					static const char *datetime_ = "2022-01-09 01:13:09";
 
 					const char *version() {
 						return version_;
