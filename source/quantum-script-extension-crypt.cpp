@@ -14,7 +14,7 @@
 #include "quantum-script-extension-crypt-license.hpp"
 #include "quantum-script-extension-crypt.hpp"
 #ifndef QUANTUM_SCRIPT_EXTENSION_CRYPT_NO_VERSION
-#include "quantum-script-extension-crypt-version.hpp"
+#	include "quantum-script-extension-crypt-version.hpp"
 #endif
 
 #include "quantum-script-variableboolean.hpp"
@@ -45,28 +45,28 @@ namespace Quantum {
 					const uint8_t *data = nullptr;
 					size_t dataSize = 0;
 
-					if(TIsType<VariableString>(passwordV)) {
+					if (TIsType<VariableString>(passwordV)) {
 						password = (const uint8_t *)(((VariableString *)passwordV.value())->value.value());
 						passwordSize = ((VariableString *)passwordV.value())->value.length();
 					};
 
-					if(TIsType<VariableBuffer>(passwordV)) {
+					if (TIsType<VariableBuffer>(passwordV)) {
 						password = (const uint8_t *)(((VariableBuffer *)passwordV.value())->buffer.buffer);
 						passwordSize = ((VariableBuffer *)passwordV.value())->buffer.length;
 					};
 
-					if(TIsType<VariableString>(dataV)) {
+					if (TIsType<VariableString>(dataV)) {
 						data = (const uint8_t *)(((VariableString *)dataV.value())->value.value());
 						dataSize = ((VariableString *)dataV.value())->value.length();
 					};
 
-					if(TIsType<VariableBuffer>(dataV)) {
+					if (TIsType<VariableBuffer>(dataV)) {
 						data = (const uint8_t *)(((VariableBuffer *)dataV.value())->buffer.buffer);
 						dataSize = ((VariableBuffer *)dataV.value())->buffer.length;
 					};
 
-					if(password != nullptr) {
-						if(data != nullptr) {
+					if (password != nullptr) {
+						if (data != nullptr) {
 							XYO::Buffer output;
 							XYO::Crypt::passwordEncrypt(password, passwordSize, data, dataSize, output);
 							return VariableBuffer::newVariable(output.buffer, output.length);
@@ -88,30 +88,30 @@ namespace Quantum {
 					const uint8_t *data = nullptr;
 					size_t dataSize = 0;
 
-					if(TIsType<VariableString>(passwordV)) {
+					if (TIsType<VariableString>(passwordV)) {
 						password = (const uint8_t *)(((VariableString *)passwordV.value())->value.value());
 						passwordSize = ((VariableString *)passwordV.value())->value.length();
 					};
 
-					if(TIsType<VariableBuffer>(passwordV)) {
+					if (TIsType<VariableBuffer>(passwordV)) {
 						password = (const uint8_t *)(((VariableBuffer *)passwordV.value())->buffer.buffer);
 						passwordSize = ((VariableBuffer *)passwordV.value())->buffer.length;
 					};
 
-					if(TIsType<VariableString>(dataV)) {
+					if (TIsType<VariableString>(dataV)) {
 						data = (const uint8_t *)(((VariableString *)dataV.value())->value.value());
 						dataSize = ((VariableString *)dataV.value())->value.length();
 					};
 
-					if(TIsType<VariableBuffer>(dataV)) {
+					if (TIsType<VariableBuffer>(dataV)) {
 						data = (const uint8_t *)(((VariableBuffer *)dataV.value())->buffer.buffer);
 						dataSize = ((VariableBuffer *)dataV.value())->buffer.length;
 					};
 
-					if(password != nullptr) {
-						if(data != nullptr) {
+					if (password != nullptr) {
+						if (data != nullptr) {
 							XYO::Buffer output;
-							if(XYO::Crypt::passwordDecrypt(password, passwordSize, data, dataSize, output)) {
+							if (XYO::Crypt::passwordDecrypt(password, passwordSize, data, dataSize, output)) {
 								return VariableBuffer::newVariable(output.buffer, output.length);
 							};
 						};
@@ -131,17 +131,17 @@ namespace Quantum {
 					const uint8_t *password = nullptr;
 					size_t passwordSize = 0;
 
-					if(TIsType<VariableString>(passwordV)) {
+					if (TIsType<VariableString>(passwordV)) {
 						password = (const uint8_t *)(((VariableString *)passwordV.value())->value.value());
 						passwordSize = ((VariableString *)passwordV.value())->value.length();
 					};
 
-					if(TIsType<VariableBuffer>(passwordV)) {
+					if (TIsType<VariableBuffer>(passwordV)) {
 						password = (const uint8_t *)(((VariableBuffer *)passwordV.value())->buffer.buffer);
 						passwordSize = ((VariableBuffer *)passwordV.value())->buffer.length;
 					};
 
-					if(password != nullptr) {
+					if (password != nullptr) {
 						return VariableBoolean::newVariable(XYO::Crypt::passwordEncryptFile(password, passwordSize, fileIn, fileOut));
 					};
 
@@ -159,23 +159,22 @@ namespace Quantum {
 					const uint8_t *password = nullptr;
 					size_t passwordSize = 0;
 
-					if(TIsType<VariableString>(passwordV)) {
+					if (TIsType<VariableString>(passwordV)) {
 						password = (const uint8_t *)(((VariableString *)passwordV.value())->value.value());
 						passwordSize = ((VariableString *)passwordV.value())->value.length();
 					};
 
-					if(TIsType<VariableBuffer>(passwordV)) {
+					if (TIsType<VariableBuffer>(passwordV)) {
 						password = (const uint8_t *)(((VariableBuffer *)passwordV.value())->buffer.buffer);
 						passwordSize = ((VariableBuffer *)passwordV.value())->buffer.length;
 					};
 
-					if(password != nullptr) {
+					if (password != nullptr) {
 						return VariableBoolean::newVariable(XYO::Crypt::passwordDecryptFile(password, passwordSize, fileIn, fileOut));
 					};
 
 					return Context::getValueUndefined();
 				};
-
 
 				void registerInternalExtension(Executive *executive) {
 					executive->registerInternalExtension("Crypt", initExecutive);
@@ -195,8 +194,7 @@ namespace Quantum {
 					executive->compileStringX("Script.requireExtension(\"Buffer\");");
 
 					executive->compileStringX(
-						"var Crypt={};"
-					);
+					    "var Crypt={};");
 
 					executive->setFunction2("Crypt.passwordEncrypt(key,data)", passwordEncrypt);
 					executive->setFunction2("Crypt.passwordDecrypt(key,data)", passwordDecrypt);
@@ -214,4 +212,3 @@ extern "C" QUANTUM_SCRIPT_EXTENSION_CRYPT_EXPORT void quantumScriptExtension(Qua
 	Quantum::Script::Extension::Crypt::initExecutive(executive, extensionId);
 };
 #endif
-

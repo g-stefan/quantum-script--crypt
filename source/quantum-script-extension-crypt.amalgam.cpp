@@ -12,6 +12,5 @@
 #include "quantum-script-extension-crypt-license.cpp"
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_CRYPT_NO_VERSION
-#include "quantum-script-extension-crypt-version.cpp"
+#	include "quantum-script-extension-crypt-version.cpp"
 #endif
-
