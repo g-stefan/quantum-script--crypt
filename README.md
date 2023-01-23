@@ -2,10 +2,10 @@
 
 ```javascript
 Crypt;
-Crypt.passwordEncrypt(key,data);
-Crypt.passwordDecrypt(key,data);
-Crypt.passwordEncryptFile(key,fileIn,fileOut);
-Crypt.passwordDecryptFile(key,fileIn,fileOut);
+Crypt.encrypt(key,data);
+Crypt.decrypt(key,data);
+Crypt.encryptFile(key,fileIn,fileOut);
+Crypt.decryptFile(key,fileIn,fileOut);
 ```
 
 ## License
