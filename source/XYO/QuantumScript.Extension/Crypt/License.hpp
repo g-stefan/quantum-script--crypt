@@ -13,8 +13,8 @@
 
 namespace XYO::QuantumScript::Extension::Crypt::License {
 
-	XYO_QUANTUMSCRIPT_EXTENSION_CRYPT_EXPORT const char *license();
-	XYO_QUANTUMSCRIPT_EXTENSION_CRYPT_EXPORT const char *shortLicense();
+	XYO_QUANTUMSCRIPT_EXTENSION_CRYPT_EXPORT std::string license();
+	XYO_QUANTUMSCRIPT_EXTENSION_CRYPT_EXPORT std::string shortLicense();
 
 };
 
