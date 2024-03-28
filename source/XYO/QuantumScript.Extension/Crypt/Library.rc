@@ -8,4 +8,4 @@
 #include <XYO/QuantumScript.Extension/Crypt/Copyright.rh>
 #include <XYO/QuantumScript.Extension/Crypt/Version.rh>
 
-XYO_APPLICATION_VERSION_INFO(XYO_QUANTUMSCRIPT_EXTENSION_CRYPT,"quantum-script--crypt.dll","Quantum Script Extension Crypt")
+XYO_PLATFORM_VERSION_INFO(XYO_QUANTUMSCRIPT_EXTENSION_CRYPT,"quantum-script--crypt.dll","Quantum Script Extension Crypt")
